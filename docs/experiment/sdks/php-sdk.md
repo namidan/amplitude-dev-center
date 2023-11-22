@@ -115,13 +115,14 @@ Fetches variants for a [user](../general/data-model.md#users) and returns the re
 
 ```php
 <?php
-fetch(User $user): PromiseInterface
+fetch(User $user, array $flagKeys = []): PromiseInterface
 // Upon resolution of the promise, an array of variants is returned on success, an empty array is returned on failure
 ```
 
 | Parameter  | Requirement | Description |
 | --- | --- | --- |
 | `user` | required | The [user](../general/data-model.md#users) to remote fetch variants for. |
+| `flagKeys` | optional | Specific flags or experiments to evaluate. If empty, Amplitude evaluates all flags and experiments. |
 
 ```php
 <?php
